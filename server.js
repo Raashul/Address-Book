@@ -13,6 +13,7 @@ var multipartMiddleware			= multipart();
 
 var app 									= express();
 
+mongoose.connect('mongodb://localhost/address_book');
 
 
 app.use(passport.initialize());
@@ -31,6 +32,24 @@ app.use('/server', express.static(__dirname + '/server'));
 
 app.get('/', function(req, res){
 	res.sendfile('./index.html');
+})
+
+
+app.get('/api/home/getHomePage', function(req, res){
+
+var Post      =   require('./server/datasets/users');
+
+  Post.find({}, function(err, users){
+    console.log('this is the data from the database');
+    console.log(users);
+    if(err){
+      res.send('error in connecting database');
+    }
+    else{
+      res.json(users);
+    }
+  })
+
 })
 
 app.listen(process.env.PORT || 3000, function(){
