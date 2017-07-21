@@ -1,6 +1,6 @@
 var mongoose    = require('mongoose');
 
-module.exports = mongoose.model('movie', {
+module.exports = mongoose.model('address_book_posts', {
 
   name: String,
 

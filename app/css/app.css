@@ -1,3 +1,22 @@
-.list{
+body{
+	margin: 0 0;
+	padding: 0 0;
+	font-style: "Inconsolata";
+}
+
+.list_container{
 	width: 60%;
+}
+
+.icons{
+	float: right;
+}
+
+.icons i{
+	margin-right: 5px;
+}
+
+
+.form_style{
+	widows: 40%;
 }

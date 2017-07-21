@@ -1,18 +1,81 @@
 <center>
   <h2>Your Address Book </h2>
-<div class="container list">
-  <div class="list-group">
-  <button type="button" class="list-group-item list-group-item-action">
-    Cras justo odio
-  </button>
+
+<div class="container list_container">
+
+  <ul class="list-group list">
+        <li class="list-group-item ">Cras justo odio
+          <span class="icons">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </span>
+        </li>
+         <li class="list-group-item ">Cras justo odio
+          <span class="icons">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </span>
+        </li>
+         <li class="list-group-item ">Cras justo odio
+          <span class="icons">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </span>
+        </li>
+         <li class="list-group-item ">Cras justo odio
+          <span class="icons">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </span>
+        </li>
+
+  </ul>
+
+  <a ng-click="addNewContacts()" class="btn btn-primary">Add New Contacts</a>
+
+  <hr>
 
 
-  <textarea>
-    
-  </textarea>
-  
+  <div ng-if="display_form">
+    <form class="form_style">
+       <div class="form-group">
+          <label>Name</label>
+          <input type="name" class="form-control" placeholder="Name"  ng-model="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="text" class="form-control" placeholder="120 Bloomfield Avenue, Caldwell, NJ, 07006" =>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Phone Number</label>
+          <input type="number" class="form-control" placeholder="Phone Number">
+        </div>
+
+         <div class="form-group">
+          <label for="exampleInputEmail1">Address</label>
+          <input type="text" class="form-control" placeholder="120 Bloomfield Avenue, Caldwell, NJ, 07006" >
+        </div>
+
+         <div class="form-group">
+          <label for="exampleInputEmail1">Address</label>
+          <input type="text" class="form-control" placeholder="120 Bloomfield Avenue, Caldwell, NJ, 07006" >
+        </div>
+
+         <div class="form-group">
+          <label for="exampleInputEmail1">Notes(Optional)</label>
+          <input type="text" class="form-control" placeholder=""> 
+        </div>
+      
+       
+        <button class="btn btn-success" ng-click="submitNewUser()">Submit</button>
+</form>
+  </div>
+   
 </div>
 
-</div>
 
 </center>
+
+

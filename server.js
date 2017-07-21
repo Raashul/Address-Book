@@ -40,8 +40,7 @@ app.get('/api/home/getHomePage', function(req, res){
 var Post      =   require('./server/datasets/users');
 
   Post.find({}, function(err, users){
-    console.log('this is the data from the database');
-    console.log(users);
+ 
     if(err){
       res.send('error in connecting database');
     }
