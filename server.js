@@ -1,8 +1,9 @@
 var express 						= require('express');
 var mongoose 						= require('mongoose');
-var bodyParser						= require('body-parser');
-var nodemailer          			= require('nodemailer');
+var bodyParser					= require('body-parser');
+var nodemailer          = require('nodemailer');
 var passport 						= require('passport');
+var mongodb             = require('mongodb');
 
 
 
@@ -17,15 +18,19 @@ var app 									= express();
 
 //this mongoose connection is for heroku
 
-mongoose.createConnection("mongodb://Rashul:Password12@ds151163.mlab.com:51163/address_book_db");
+//mongoose.createConnection("mongodb://Rashul:Password12@ds151163.mlab.com:51163/address_book_db");
 
-mongoose.connect(process.env.MONGODB_URI, function(err){
+var MONGOLAB_URI = "mongodb://Rashul:Password12@ds151163.mlab.com:51163/address_book_db";
+
+mongoose.connect(process.env.MONGOLAB_URI, function(err){
  if(err){
    console.error(err);
  }else{
    console.log('success');
  }
 })
+
+
 
 
 
