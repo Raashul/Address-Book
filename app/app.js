@@ -10,6 +10,18 @@
 				controller: 'HomeController'
 			})
 
+			.state('addNewContacts',{
+				url:'/add-contacts',
+				templateUrl:'app/contacts/add.html',
+				controller: 'AddContacts'
+			})
+
+			.state('editContact', {
+				url:'/edit-contact/:id',
+				templateUrl:'app/edit-contact/edit-contact.html',
+				controller: 'EditContact'
+			})
+
 
 		})
 }());

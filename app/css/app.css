@@ -4,19 +4,39 @@ body{
 	font-style: "Inconsolata";
 }
 
+li:hover{
+	cursor: pointer;
+}
+
+
 .list_container{
-	width: 60%;
+	width: 50%;
+}
+
+.icons:hover{
+	cursor: 
 }
 
 .icons{
 	float: right;
 }
 
+.icons:hover{
+	cursor: hand;
+}
+
 .icons i{
 	margin-right: 5px;
 }
 
+.hide_icon{
+	float: right;
+}
+
 
 .form_style{
-	widows: 40%;
+
 }
+
+
+
