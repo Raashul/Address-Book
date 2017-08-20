@@ -18,9 +18,8 @@ var app 									= express();
 
 //this mongoose connection is for heroku
 
-//mongoose.createConnection("mongodb://Rashul:Password12@ds151163.mlab.com:51163/address_book_db");
+mongoose.createConnection("mongodb://Rashul:Rashul12@ds151163.mlab.com:51163/address_book_db");
 
-var MONGOLAB_URI = "mongodb://Rashul:Password12@ds151163.mlab.com:51163/address_book_db";
 
 mongoose.connect(process.env.MONGOLAB_URI, function(err){
  if(err){
