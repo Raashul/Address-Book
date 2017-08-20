@@ -18,16 +18,20 @@ var app 									= express();
 
 //this mongoose connection is for heroku
 
-mongoose.createConnection("mongodb://Rashul:test123@ds151163.mlab.com:51163/address_book_db");
+// mongoose.createConnection("mongodb://Rashul:test123@ds151163.mlab.com:51163/address_book_db");
 
-mongoose.connect(process.env.MONGOLAB_URI, function(err){
- if(err){
-   console.error(err);
- }else{
-   console.log('success');
- }
-})
+// mongoose.connect(process.env.MONGOLAB_URI, function(err){
+//  if(err){
+//    console.error(err);
+//  }else{
+//    console.log('success');
+//  }
+// })
 
+var uri = "mongodb://Rashul:test123@ds151163.mlab.com:51163/address_book_db";
+mongodb.MongoClient.connect(uri, function (err, db) {
+    /* adventure! */
+});
 
 var Post      =   require('./server/datasets/users');
 
