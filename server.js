@@ -12,7 +12,23 @@ var multipartMiddleware			= multipart();
 
 var app 									= express();
 
-mongoose.connect('mongodb://localhost/address_book');
+//mongoose.connect('mongodb://localhost/address_book');
+
+
+//this mongoose connection is for heroku
+
+mongoose.createConnection("mongodb://Rashul:Password12@ds151163.mlab.com:51163/address_book_db");
+
+mongoose.connect(process.env.MONGODB_URI, function(err){
+ if(err){
+   console.error(err);
+ }else{
+   console.log('success');
+ }
+})
+
+
+
 var Post      =   require('./server/datasets/users');
 
 app.use(passport.initialize());
